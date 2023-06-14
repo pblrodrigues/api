@@ -1,13 +1,14 @@
-package med.vol.api.medico;
+package med.vol.api.domain.medico;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import med.vol.api.domain.endereco.DadosEndereco;
 
 public record DadosCadastroMedicos(
-    @NotBlank
+    @NotBlank(message = "Nome eeeé obrigatório")
     String nome, 
     
     @NotBlank
